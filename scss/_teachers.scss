@@ -1,0 +1,75 @@
+
+
+.teachers{
+    min-height: ( $size * 55 );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: $color_silver_white;
+    margin-top: ( $size * 5 );
+      .teachers_title{
+        margin: ( $size * 5 ) auto;
+        .teachers_title_text{
+            font-size: ( $size * 4 );
+            text-align: center;
+        }
+      }
+      .teachers_content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+          .teacher_content_item{
+             width: ( $size * 30 );
+             min-height: ( $size * 20 );
+             display: flex;
+             flex-direction: row;
+             justify-content: space-between;
+             flex-wrap: wrap;
+             align-items: center;
+             margin: auto ( $size * 5 ) ;       
+               .teacher_content_item_img{
+                   width: ( $size * 12 );
+                   height: ( $size * 12 );
+               }
+               .teacher_content_item_desc{
+                text-align: center;
+                    .teacher_name{
+                        font-size: ( $size * 2.5 );
+                    }
+                    .teacher_position{
+                        color:$color_green;
+                        font-size: ( $size * 2 );
+                    }
+               }
+          }
+      }
+}
+
+@media screen and (max-width: 730px) {
+    .teachers{
+        margin-top:  $size  ;
+        .teacher_nav_indicate{
+            width:( $size * 24 );
+            margin: ( $size * 2.5 ) auto;
+            text-align: center;
+            .indicate_silver{
+                border: none;
+                background-color: $color_silver_dark;
+            } 
+            span{
+                display: inline-block;
+                margin-top: ( $size * 0.5 );
+                width: ( $size * 1.8 );
+                height: ( $size * 1.8  );
+                border: 2px solid $color_black;
+                border-radius: 50%;     
+           }
+        }
+        .teachers_content{
+            flex-wrap: nowrap !important; 
+            overflow: hidden;  
+        }
+    }  
+}

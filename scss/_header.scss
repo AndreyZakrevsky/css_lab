@@ -1,0 +1,131 @@
+ $header_background  :black ;
+ $header_background_image : '../images/path1.png';
+ $font_header_color : #FEFEFE;
+ 
+.header_main{
+    margin: 0 auto;
+    max-width: ( $size * 144 );
+    min-height: ( $size * 62.5 );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $font_header_color;
+    background-image: url($header_background_image);
+    background-color: $header_background;
+    opacity: 0.9;
+        .header{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items:center;
+            flex-wrap: wrap;
+            padding: ( $size * 3 );            
+                .header_logo{
+                    display: flex;
+                    font-size: ( $size * 2 );
+                    justify-content: space-around;
+                    align-items:stretch;
+                       .logo_img{
+                        display: inline-block;
+                        height: ( $size * 3 );
+                        padding-right: $size;
+                       }
+                }              
+                .header_nav{
+                    align-self: center;
+                    display: block;
+                    justify-content: center;
+                        .header_nav_item{
+                            display: inline-block;
+                            text-decoration: none;
+                            font-size: ( $size * 2 );
+                            margin: ( $size * 1.5 );
+                            color: $font_header_color;
+                            &:hover{
+                                text-shadow: 1px 1px 2px $color_silver_white, 0 0 1em yellow;
+                            }  
+                        }
+                }
+        }      
+        .heading_box{
+            align-self: center;
+            text-align: center;
+            margin-bottom: ( $size * 12 );   
+            .heading_box_title{
+                font-size: ( $size * 7.7 );
+            }
+           .heading_box_text{
+                font-size: ( $size * 2 );
+            }          
+            .learn_btn{
+                display: inline-block;
+                text-decoration: none;
+                margin-top: ( $size * 2.2 );
+                color: $font_header_color ; 
+                background-color: $color_green;
+                font-size: ( $size * 2 );
+                border-radius: ( $size * 2 );
+                padding: ( $size * 1.5 ) ( $size * 4 );
+                &:hover{
+                    text-shadow: 1px 1px 2px $color_silver_white, 0 0 1em yellow;
+                }              
+            }
+        }
+        .header_nav_indicate{
+            text-align: center;
+            .header_nav_indicate_item{
+                display: inline-block;
+                width: ( $size * 2.5 );
+                height: ( $size * 2.5 );
+                border-radius: 50%;
+                border: 1px solid $font_header_color;        
+            }
+            .indicate_green{
+                background-color: $color_green ;
+                border: none;
+            }
+        }
+}
+
+@media screen and (max-width: 730px) {
+    .header_main{
+        background-image:none;
+        .header{
+            justify-content: space-between;
+           .header_logo{
+               justify-content: space-between;
+               width: 100%;
+                .education_text{
+                    visibility: hidden;
+                }
+                .header_indicate{
+                    display:flex;
+                    flex-direction: column;
+                    .header_indicate_element{
+                        display: inline-block;
+                        margin-top: ( $size * 0.5 );
+                        width: ( $size * 4 );
+                        height: ( $size * 0.6 );
+                        background-color:$font_header_color; 
+                    }
+                }
+           }
+           .header_nav{
+               display: none;
+           } 
+        } 
+        .heading_box{
+            margin-bottom: 0;
+            .heading_box_title{
+                font-size: ( $size * 4 );
+                font-weight:bold;
+                margin: ( $size * 2.5 );
+            }
+            .heading_box_text{
+                margin: ( $size * 2.5 );
+            }
+        }
+    }
+}
+

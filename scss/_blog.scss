@@ -1,0 +1,111 @@
+.blog{
+    min-height: ( $size * 66 );
+    margin-top: $size;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+        .blog_title{
+            width: 100%;
+            margin: ( $size * 5 ) auto;
+              .blog_title_text{
+                  font-size: ( $size * 4 );
+                  text-align: center;
+              }
+        }
+        .blog_content{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: stretch;
+            .blog_content_item{
+                width: ( $size * 30 );
+                min-height: ( $size * 10 ); 
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap; 
+                text-align: center;
+                margin:( $size * 3 ) ;
+                font-size: ( $size * 1.5 );
+                    .blog_content_item_title{
+                        margin: ( $size * 1.5 )( $size * 3 );
+                    }
+             }
+        }
+        .blog_read_more_btn{  
+            margin: 50px auto;
+            .read_btn{
+                display: inline-block;
+                text-decoration: none;
+                color: $color_white ; 
+                background-color: $color_green;
+                font-size: ( $size * 2);
+                border-radius: ( $size * 2 );
+                padding: ( $size * 1.5 ) ( $size * 4 );
+                &:hover{
+                    text-shadow: 1px 1px 2px $color_silver_white, 0 0 1em yellow;
+                }  
+            }
+        }
+        .subscrib{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 100%;
+            min-height: ( $size * 20 );
+            background-image: url('../images/subs.png');
+            text-align: center;
+            .subscrib_title{
+                color:white;
+                font-size: ( $size * 3.5 );
+            }
+            .subscrib_sign{
+                display: inline-block;
+                text-decoration: none;
+                color: aliceblue ; 
+                background-color: $color_green;
+                font-size: ( $size * 2 );
+                border-radius: ( $size * 2 );
+                padding: ( $size * 1.5) ( $size * 4 ); 
+                &:hover{
+                    text-shadow: 1px 1px 2px $color_silver_white, 0 0 1em yellow;
+                }        
+            }
+            .subscrib_input{
+                width: ( $size * 30 );
+                height: ( $size * 2.5 );
+                border: none;
+                border-bottom:( $size * 0.2 ) solid $color_silver_dark;
+                background: none;
+                color:$color_white;
+            }
+        }      
+}
+
+@media screen and (max-width: 750px) {   
+    .blog_content{
+        flex-wrap: nowrap !important;
+        overflow: hidden;
+        .last{
+            display: none !important;
+        }
+    }
+    .subscrib{
+        height: ( $size * 40 );
+        background-repeat: no-repeat;
+        .subscrib_title{
+            margin:( $size * 2 ) ( $size * 5 );
+            font-size: ( $size * 3 ) !important;
+            font-weight: bolder;
+        }
+        .subscrib_input{
+            width: ( $size * 20 )!important;
+            margin:( $size * 2 ) ( $size * 2 );
+        }
+    }
+}
+
+
+

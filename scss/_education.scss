@@ -1,0 +1,86 @@
+$background_color : #FEFEFE;
+$font_color : black;
+
+
+.education{
+    margin: 0 auto;
+    max-width: 1440px;
+    min-height: 650px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: $font_header_color;
+    background-color: $background_color;
+    color: $font_color;
+    align-items:stretch;
+      .education_img_block{
+         width: 40%;
+         height: 80%;
+         min-width: ( $size * 30 );
+         flex-basis: 40%;
+         align-self: center;
+                .education_img{
+                    width: 100%;
+                    height: 100%;
+                }  
+      } 
+      .education_content_block{
+          min-width: ( $size * 30 );
+          flex-basis: 40%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items:stretch;
+          align-self: center;
+            .blok_second{
+               margin-top: ( $size * 10 );                    
+                 .block_text_list{
+                    display: flex;
+                    justify-content: flex-start;
+                    margin-bottom: ( $size * 2.5 );
+                        .some_text{
+                            font-size: ( $size * 3 );
+                            margin-left: ( $size * 2 );
+                        }
+                        .education_img{
+                            width: ( $size * 4 );
+                            height: ( $size * 3 );
+                        }
+                   }
+            }
+
+            .blok_first{
+                .blok_first_title{
+                  font-size: ( $size * 4 );
+                  margin-bottom: ( $size * 2 );
+                }
+                .blok_first_desc{
+                    font-size: ( $size * 1.7 ) 
+                }
+            }      
+      }
+}
+
+
+@media screen and (max-width: 730px){
+    .education{
+       .education_img_block{
+          margin-top: ( $size * 2);
+        }
+       .education_content_block{
+         .blok_first{
+            .blok_first_title{
+                margin-top: ( $size * 1.5 );
+                font-weight: bolder;
+            }
+            .blok_first_desc{
+                font-size: 1.4rem;
+            }
+        }
+         .blok_second{
+            margin-top: ( $size * 5 );
+        }
+       } 
+    }
+}

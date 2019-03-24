@@ -1,0 +1,93 @@
+.client{
+    min-height: ( $size * 60 );
+    margin-top: ( $size * 10 );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: $color_silver_white;
+        .client_title{
+            width: 100%;
+            margin: ( $size * 5 ) auto;
+              .client_title_text{
+                  font-size: ( $size * 4 );
+                  text-align: center;
+              }
+        }
+        .client_slider{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            .sl_content{
+                height: 100%;
+                width: ( $size * 90 );
+                display: flex;          
+                flex-direction: column;
+                justify-content: center; 
+                align-items: center;
+                text-align: center;
+                font-size: ( $size * 1.7 );
+                .client_image{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center; 
+                    flex-wrap: wrap;
+                   }           
+                .sl_content_text{
+                    margin-top: ( $size * 5 );
+                    font-size: ( $size * 2.5 );
+                    .sl_content_text_ceo{
+                        color: #3C3C3C;
+                    }
+                }
+                p{
+                    margin: ( $size * 4 ) 80px;
+                }
+            }
+            .sl_prev{
+                width: ( $size * 20 );
+                height: 100%;
+                text-align: right; 
+                font-size: ( $size * 2.5 );         
+            }
+            .sl_next{
+                width: ( $size * 20 );
+                height: 100%; 
+                font-size: ( $size * 2.5 );          
+            }
+     }
+}
+
+@media screen and (max-width: 885px) {
+    .client{
+        min-height: ( $size * 50 ); 
+        .client_slider{
+            .sl_next , .sl_prev{
+                 display: none;
+            }
+            .client_image_item{
+                display: none;           
+            }
+            .sl_content_text{
+                display: none; 
+            }
+       }
+       .client_nav_indicate{
+           width:( $size * 24 );
+           margin: ( $size * 2.5 ) auto;
+           text-align: center;
+           .indicate_green{
+                border: none;
+                background-color: $color_green;
+            } 
+            span{
+                display: inline-block;
+                width: ( $size * 1.5 );
+                height: ( $size * 1.5 );
+                border-radius: 50%;
+                border: 2px solid $color_black;        
+            }
+        }      
+    }
+}

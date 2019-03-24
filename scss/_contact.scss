@@ -1,0 +1,107 @@
+.contact{
+    min-height: ( $size * 66 );
+    margin-top: $size ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    .contact_title{
+        width: 100%;
+            margin: ( $size * 5 ) auto;
+            .contact_title_text{
+                  font-size: ( $size * 4 );
+                  text-align: center;
+              }
+    }
+    .contact_contant{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      .contact_contant_form{
+         max-width: ( $size * 45 );
+         min-height: ( $size * 50 );
+        .contact_form{
+            .input_contact{
+                width: 100%;
+                height: ( $size * 4 );
+                font-size: ( $size * 2 );
+                margin-bottom: ( $size * 3 );
+                border: none;
+                border-bottom: ( $size * 0.2 ) solid blue;
+            }
+            .message_contact{
+                width: 100%;
+                height: ( $size * 25 );
+                font-size: ( $size * 2 );
+                border: ( $size * 0.2 ) solid blue;
+            }
+            .input_contact[type=submit]{
+                width: 40%;
+                height: ( $size * 6 );
+                margin-top: ( $size * 5 );
+                background-color: green ;
+                font-size: ( $size * 3 );
+                border-radius: ( $size * 3 );
+                color: white;
+                &:hover{
+                    text-shadow: 1px 1px 2px white, 0 0 1em yellow; 
+                }
+            }
+        }
+      }
+      .contact_contant_map{
+         max-width: ( $size * 60 );
+        min-height: ( $size * 50 );
+        iframe{
+            width:100%;
+            height:( $size * 35 );
+        }
+        .contact_contant_map_data{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            .map_data_item{
+                margin: ( $size * 2 ) auto;
+                width: ( $size * 20 );
+                min-height: ( $size * 4 );
+                color: yellow;
+                font-size: ( $size * 1.6 );
+                margin-top: ( $size * 6);
+            }
+        }
+      }
+    }
+}
+
+// @media screen and (max-width: 730px){
+//     .contact_contant{
+//        flex-direction: column-reverse !important;
+//         .contact_contant_form{
+//             .contact_form{       
+//                 .input_contact{
+//                     width: 75% !important;
+//                     margin-left: calc((100% - 75%)/2);
+//                 }
+//                 .message_contact{
+//                     width: 75% !important;
+//                      margin-left: calc((100% - 75%)/2);
+//                     border: 1px solid $color_silver_white;
+//                     height: ( $size * 20 );
+//                 }
+//                 .input_contact[type=submit]{
+//                     width: 40% !important;
+//                     margin-left: calc((100% - 40%)/2);
+//                 }
+//             }
+//         }
+//         .contact_contant_map{
+//             .contact_contant_map_data{
+//                 .map_data_item{
+//                     margin-left:calc((100% - 75%)/2) !important;
+//                 }   
+//             }
+//         }
+//     }    
+// }

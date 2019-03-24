@@ -1,0 +1,48 @@
+$size : 1rem; //10px 
+$color_green : #00B05C;
+$color_silver_white:#F1F1F1;
+$color_white:#FEFEFE;
+$color_silver_dark:#D0D0D0;
+$color_black: black;
+
+
+html{
+    font-size: 62%; 
+}
+
+ *{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sens-serif;
+}
+
+// STYLES FOR HEADER 
+@import "header.scss";
+
+// STYLES FOR EDUCATION PART OF SITE 
+@import "education.scss";
+
+// STYLES FOR FEATURES PART OF SITE 
+@import "features.scss";
+
+// STYLES FOR COURSES PART OF SITE 
+@import "courses.scss";
+
+// STYLES FOR TEACHERS PART OF SITE 
+@import "teachers.scss";
+
+// STYLES FOR PROGRAMS PART OF SITE 
+@import "programs.scss";
+
+// STYLES FOR CLIENTS  PART OF SITE 
+@import "client.scss";
+
+// STYLES FOR BLOG  PART OF SITE 
+@import "blog.scss";
+
+// STYLES FOR CONTACT  PART OF SITE 
+@import "contact.scss";
+
+//FOOTER
+@import "footer.scss";

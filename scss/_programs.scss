@@ -1,0 +1,40 @@
+.programs{
+    min-height: ( $size * 66 );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: $color_white;
+        .programs_title{
+            margin: ( $size * 5 ) auto;
+              .programs_title_text{
+                  font-size: ( $size * 4 );
+                  text-align: center;
+              }
+        }
+        .programs_content{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: stretch;
+            .programs_content_item{
+                width: ( $size * 37 );
+                 height: ( $size * 37 );
+                 margin: ( $size * 1.5 );;
+                 background-color: $color_green;
+                 text-align: center;
+                 color: $color_white;
+                 font-size: ( $size * 2 );
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: center;
+                 padding: ( $size * 3 );      
+            }
+            .pre_education{background-image: url('../images/Rectangle55.png')}
+            .m_school{background-image: url('../images/Rectangle56.png')}
+            .h_school{background-image: url('../images/Rectangle57.png')}
+            .inter_exch{background-image: url('../images/Rectangle58.png')}
+            .grad_programs{background-image: url('../images/Rectangle59.png')}
+            .hone_education{background-image: url('../images/Rectangle60.png')}
+        }
+}
